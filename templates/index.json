@@ -27,10 +27,21 @@
         "banner_button_url": "",
         "banner_button_text": "Book Now"
       }
+    },
+    "warranty_section_d3M4D3": {
+      "type": "warranty-section",
+      "settings": {
+        "banner_title": "What Is The Warranty Period For Car Window Tint?",
+        "TextOne": "We offer a transferable lifetime warranty on all PRIME™ car window films.",
+        "TextTwo": "The warranty covers against cracking, peeling, bubbling, de-lamination, fading and color change for the life of the film.",
+        "TextThree": "The warranty is transferable and will continue with the car even in the event the ownership change.",
+        "banner_image": "shopify://shop_images/IMG_8384.jpg"
+      }
     }
   },
   "order": [
     "featured-collection",
-    "automotive_banner_769WMx"
+    "automotive_banner_769WMx",
+    "warranty_section_d3M4D3"
   ]
 }
