@@ -13,7 +13,8 @@
 
 .tint-banner-wapper .image-wapper img {
     max-width: 100%;
-    height: 100%;
+    height: auto%;
+    max-height:750px;
     object-fit: cover;
     padding: 0;
     width: 100%;
@@ -50,6 +51,20 @@
     margin: 10px 0;
 }
 
+.text-wrapper .content-wrapper p{
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.18px;
+  vertical-align: middle;
+  text-transform: none;
+  padding-bottom:20px;
+
+}
+
+
 /* Description Text */
 .text-wrapper .content-wrapper .subheading {
     font-size: 1.2rem;
@@ -63,18 +78,7 @@
     vertical-align: middle;
 
 }
-.text-wrapper .content-wrapper .description{
-  color: #fff;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 0.18px;
-  vertical-align: middle;
-  text-transform: none;
-  padding-bottom:20px;
 
-}
 
 /* Button Style */
 .btn-red-rounded-home-v3 {
@@ -101,12 +105,15 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .text-wrapper{
-        padding: 40px 10px;
+        padding: 40px 15px;
     }
     .text-wrapper .content-wrapper{
         max-width: 450px;
         max-height: 100%;
         color: #fff;
+    }
+    .text-wrapper .content-wrapper p{
+        font-size: 16px;
     }
     .text-wrapper .content-wrapper .main-heading {
         font-size: 40px;
@@ -116,9 +123,7 @@
         font-family: 24px;
     }
 
-    .text-wrapper .content-wrapper .description {
-        font-size: 16px;
-    }
+  
 
     .btn-red-rounded-home-v3 {
         width: 100%;
@@ -150,12 +155,12 @@
                 <p class="subheading">
                     {{ section.settings.banner_subheading }}
                 </p>
-                <p class="description" style="color: #ffffff !important;" >
+                <div class="description" style="color: #ffffff !important;" >
                     {% if section.settings.description %}
                         {{ section.settings.description }}        
                     {% endif %}
                 
-                </p>
+                </div>
                   <a class="btn-red-rounded-home-v3" href=" {{ section.settings.banner_button_url }} ">{{  section.settings.banner_button_text }}</a>
               </div>
             </div>
@@ -185,7 +190,7 @@
       "type": "richtext",
       "id" : "description",
       "label" : "Description",
-      "default": "<p>With so many window tint films available, making the perfect choice for your vehicle has never been easier. From the latest, top of the line nano-ceramic, high-performance metallic hybrid, and even traditional dyed window tint options, there's a PRIME™ film for every application. It outperforms other types of tint to keep you comfortable and protected. All PRIME Window Tint is backed by a lifetime transferable warranty.</p>"
+      "default": "<p>Enter Text Here </p>"
     },
     {
       "type": "image_picker",

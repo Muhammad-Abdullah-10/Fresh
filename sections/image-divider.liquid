@@ -1,0 +1,43 @@
+<style>
+  .homev3-image-banner-wrapper{
+    height: auto;
+    width: 100%;
+  }
+  .homev3-image-banner-wrapper img{
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+  }
+ 
+</style>
+
+<section class="homev3-image-banner-wrapper">
+  <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.alt_text }}">
+</section>
+
+
+{% schema %}
+{
+  "name": "Home V3 Image Divider",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt Text",
+      "default": "Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home V3 Image Divider",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
