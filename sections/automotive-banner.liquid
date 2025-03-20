@@ -63,7 +63,7 @@
     vertical-align: middle;
 
 }
-.text-wrapper .content-wrapper .description{
+.text-wrapper .content-wrapper .description p{
   color: #fff;
   font-family: Poppins;
   font-weight: 400;
@@ -116,7 +116,7 @@
         font-family: 24px;
     }
 
-    .text-wrapper .content-wrapper .description {
+    .text-wrapper .content-wrapper .description p{
         font-size: 16px;
     }
 
@@ -150,12 +150,12 @@
                 <p class="subheading">
                     {{ section.settings.banner_subheading }}
                 </p>
-                <p class="description" style="color: #ffffff !important;" >
+                <div class="description" style="color: #ffffff !important;" >
                     {% if section.settings.description %}
                         {{ section.settings.description }}        
                     {% endif %}
                 
-                </p>
+                </div>
                   <a class="btn-red-rounded-home-v3" href=" {{ section.settings.banner_button_url }} ">{{  section.settings.banner_button_text }}</a>
               </div>
             </div>
@@ -182,7 +182,7 @@
       
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id" : "description",
       "label" : "Description",
       "default": ""
