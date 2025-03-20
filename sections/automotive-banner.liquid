@@ -151,7 +151,10 @@
                     {{ section.settings.banner_subheading }}
                 </p>
                 <p class="description" style="color: #ffffff !important;" >
-                    {{ section.settings.description }}
+                    {% if section.settings.description %}
+                        {{ section.settings.description }}        
+                    {% endif %}
+                
                 </p>
                   <a class="btn-red-rounded-home-v3" href=" {{ section.settings.banner_button_url }} ">{{  section.settings.banner_button_text }}</a>
               </div>
