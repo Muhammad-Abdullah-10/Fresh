@@ -1,0 +1,364 @@
+<style>
+    
+/* We are proud home v3 */
+.we-are-proud-wrapper{
+    background:#474646 ;
+    padding: 5% 0;
+}
+.we-are-proud-wrapper .content-wrap{
+    width: 750px;
+}
+.we-are-proud-wrapper .content-wrap h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 42.75px;
+    line-height: 52.8px;
+    letter-spacing: -0.48px;
+    text-align: center;
+    vertical-align: middle;
+    color:#fff;
+    margin-bottom:50px;
+
+}
+.we-are-proud-wrapper .listing-wrapper ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.we-are-proud-wrapper .listing-wrapper li{
+    color:#fff;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    vertical-align: middle;
+
+}
+.we-are-proud-wrapper .button-wrapper{
+    display:flex;
+    justify-content: center;  
+    margin-top: 50px; 
+ }
+ .button-wrapper .prime-btn-red-1 ,.button-wrapper .prime-btn-red-2{
+    background-color: #dd140e;
+    color: white;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    border: none;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    width: auto;
+    height: 54px;
+    border-radius: 100px;
+    padding: 15px 40px;
+    transition: ease-in-out .2s;
+}
+.button-wrapper .prime-btn-red-1:hover,.button-wrapper .prime-btn-red-2:hover{
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+.button-wrapper .prime-btn-red-1 {
+    margin-right: 20px;
+}
+
+
+@media(max-width:767px){
+    .we-are-proud-wrapper{
+        padding: 30px 0;
+    }
+    .we-are-proud-wrapper .content-wrap{
+        width: 100%;
+    }
+    .we-are-proud-wrapper .content-wrap h2 , .we-are-proud-wrapper .listing-wrapper {
+        padding: 10px 15px;
+    }
+    .we-are-proud-wrapper .content-wrap h2{
+        margin-bottom: 16px;
+    }
+    
+    .we-are-proud-wrapper .listing-wrapper ul{
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .we-are-proud-wrapper .button-wrapper{
+      flex-direction: column;
+        margin-top: 20px; 
+     }
+    .button-wrapper .prime-btn-red-1 {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}
+</style>
+
+<section class="we-are-proud-wrapper container-fluid">
+    <div class="content-wrap container">
+        <div class="row">
+            <h2>
+                We are proud to be the certified installer for:
+            </h2>
+        </div>
+        <div class="row justify-content-center listing-wrapper">
+            {% for block in section.blocks %}
+                <div class="col-md-4">
+                    <ul class="listing">
+                        {% for i in (1..6) %}
+                            {% assign item = block.settings["item_" | append: i] %}
+                            {% if item %}
+                                <li>{{ item }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+            {% comment %} <ul class="col-md-4 col-sm-12 listing-one">
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+            </ul>
+            <ul class="col-md-4 col-sm-12 listing-two">
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+            </ul>
+            <ul class="col-md-4 col-sm-12 listing-three">
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+                <li>
+                    Milwaukee, W
+                </li>
+            </ul> {% endcomment %}
+        </div>
+
+        <div class="button-wrapper">
+            <a class="prime-btn-red-1" href="#">{{Inquire for Pricing}}</a>
+            <a class="prime-btn-red-2" href="#">Book a Call</a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Listing Locations",
+    "settings": [
+        {
+            "type": "text",
+            "id" : "title_listing" ,
+            "label"  : "Heading",
+            "default" : "We are proud to be the certified installer for:"
+        },
+        {
+            "type": "text",
+            "id": "button_one_text",
+            "label": "Button One Text",
+            "default": "Inquire for Pricing"
+        },
+        {
+            "type": "text",
+            "id": "button_one_url",
+            "label": "Button One url",
+            "default": "Enter Link Here"
+        },
+        {
+            "type": "text",
+            "id": "button_two_text",
+            "label": "Button Two Text",
+            "default": "Book a Call"
+        },
+        {
+            "type": "text",
+            "id": "button_two_url",
+            "label": "Button Two url",
+            "default": "Enter Link Here"
+        }
+    ],
+    "blocks": 
+    [
+        {
+        "type": "listing_one",
+        "name": "Listing One",
+        "settings": [
+            {
+            "type": "text",
+            "id": "item_1",
+            "label": "Item 1",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_2",
+            "label": "Item 2",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_3",
+            "label": "Item 3",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_4",
+            "label": "Item 4",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_5",
+            "label": "Item 5",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_6",
+            "label": "Item 6",
+            "default": "Milwaukee, W"
+            }
+        ]
+        },
+        {
+        "type": "listing_two",
+        "name": "Listing Two",
+        "settings": [
+            {
+            "type": "text",
+            "id": "item_1",
+            "label": "Item 1",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_2",
+            "label": "Item 2",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_3",
+            "label": "Item 3",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_4",
+            "label": "Item 4",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_5",
+            "label": "Item 5",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_6",
+            "label": "Item 6",
+            "default": "Milwaukee, W"
+            }
+        ]
+        },
+        {
+        "type": "listing_three",
+        "name": "Listing Three",
+        "settings": [
+            {
+            "type": "text",
+            "id": "item_1",
+            "label": "Item 1",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_2",
+            "label": "Item 2",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_3",
+            "label": "Item 3",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_4",
+            "label": "Item 4",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_5",
+            "label": "Item 5",
+            "default": "Milwaukee, W"
+            },
+            {
+            "type": "text",
+            "id": "item_6",
+            "label": "Item 6",
+            "default": "Milwaukee, W"
+            }
+        ]
+        }
+    ],
+    "presets": [
+    {
+      "name": "Listing Locations",
+      "category": "Custom Sections"
+    }
+    ],
+    "max_blocks": 6
+}
+{% endschema %}
