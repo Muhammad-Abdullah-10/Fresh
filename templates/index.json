@@ -147,9 +147,9 @@
       "settings": {
         "title_listing": "We are proud to be the certified installer for:",
         "button_one_text": "Inquire for Pricing",
-        "button_one_url": "Enter Link Here",
+        "button_one_url": "https://admin.shopify.com/",
         "button_two_text": "Book a Call",
-        "button_two_url": "Enter Link Here"
+        "button_two_url": "https://admin.shopify.com/"
       }
     }
   },
