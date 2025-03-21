@@ -1,0 +1,250 @@
+{% style %}
+    
+/* prime offering */
+.prime-offering{
+    padding: 10px 7.5%;
+}
+.prime-offering .prime-logo-top{
+    position: relative;
+}
+.prime-offering .prime-logo-top img{
+    object-fit: cover;
+}
+.prime-offering .prime-top-content{
+    margin-top: -50px;
+}
+
+.prime-offering .prime-heading{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 41.81px;
+    line-height: 52.8px;
+    letter-spacing: -0.48px;
+    vertical-align: middle;
+    margin-bottom: 24px;
+}
+.prime-offering .prime-para{
+    max-width: 90%;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18px;
+}
+.prime-offering .prime-btn-red-rounded-home-v3{
+    background-color: #dd140e;
+    color: white;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    border: none;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    width: 324px;
+    height: 54px;
+    border-radius: 100px;
+    padding: 15px 40px;
+    transition: ease-in-out .2s;
+}
+.prime-offering .prime-btn-red-rounded-home-v3:hover{
+    border: 2px solid #dd140e;
+    color: #dd140e;
+    background: transparent;
+}
+.prime-offering .prime-top-content .view-sheet{
+    text-decoration: none;
+    color: #000;
+    /* text-align: center; */
+    margin-top: 20px;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+
+}
+.prime-offering .prime-top-content .view-sheet i {
+    color: #dd140e;
+    fill: #dd140e;
+}
+
+.prime-offering .prime-main-content{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    margin-top: 30px;
+}
+.prime-main-content-wrapper{
+    margin-bottom: 30px;
+    max-width: 80%;
+}
+.prime-main-content-wrapper h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 21.56px;
+    line-height: 26.4px;
+    letter-spacing: -0.24px;
+}
+.prime-main-content-wrapper p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+}
+
+@media (max-width:767px) {
+    .prime-offering{
+        padding: 20px 15px;
+    }
+    .prime-offering .prime-top-content{
+        margin-top: 0px;
+        padding: 20px 15px;
+    }
+
+    .prime-offering .prime-top-content{
+        align-items: center;
+    }
+    .prime-offering .prime-heading {
+        width: 90%;
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .prime-offering .prime-top-content .view-sheet{
+        padding-left: 0;
+    }
+    .prime-offering .prime-main-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+    .prime-main-content-wrapper{
+        max-width: 90%;
+        justify-self: center;
+    }
+}
+
+{% endstyle %}
+
+<section class="prime-offering container-fluid">
+    <!-- Logo Section -->
+    <div class="d-flex row justify-content-center justify-content-md-end prime-logo-top">
+        <img src="{{ section.settings.logo_image | img_url: 'original' }}" alt="Logo" class="img-fluid">
+    </div>
+    
+    <!-- Top Content Section -->
+    <div class="d-flex row flex-column prime-top-content">
+        <h2 class="prime-heading">
+            {{ section.settings.banner_title }}
+        </h2>
+        <p class="prime-para">
+            {{ section.settings.banner_description }}
+        </p>
+        <a class="prime-btn-red-rounded-home-v3" href="{{ section.settings.button_url }}">
+            {{ section.settings.button_text }}
+        </a>
+        <a class="view-sheet" href="{{ section.settings.specification_sheet_url }}">
+            <i class="{{ section.settings.icon_class }}"></i>
+            {{ section.settings.specification_text }}
+        </a>
+    </div>
+    
+    <!-- Main Content Loop Section -->
+    <div class="prime-main-content">
+        {% for block in section.blocks %}
+        <div class="prime-main-content-wrapper">
+            <h2>{{ block.settings.main_title }}</h2>
+            <p>{{ block.settings.main_description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+    {
+      "name": "Prime Offering Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "banner_title",
+          "label": "Banner Title",
+          "default": "PRIME International Offerings"
+        },
+        {
+          "type": "textarea",
+          "id": "banner_description",
+          "label": "Banner Description",
+          "default": "See the road in a whole new light with XPEL PRIME. Our window film is specifically curated to each region, so you can find the best fit for your vehicle."
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL",
+          "default": "#"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Schedule a Call"
+        },
+        {
+          "type": "url",
+          "id": "specification_sheet_url",
+          "label": "Specification Sheet URL",
+          "default": "#"
+        },
+        {
+          "type": "text",
+          "id": "specification_text",
+          "label": "Specification Text",
+          "default": "View our Specification Sheet"
+        },
+        {
+          "type": "text",
+          "id": "icon_class",
+          "label": "Font Awesome Icon Class",
+          "default": "fas fa-file-pdf",
+          "description": "Enter a Font Awesome icon class, e.g., 'fas fa-file-pdf'. Default is 'fas fa-file-pdf'."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "content_block",
+          "name": "Content Block",
+          "settings": [
+            {
+              "type": "text",
+              "id": "main_title",
+              "label": "Main Title",
+              "default": "PRIME X Series"
+            },
+            {
+              "type": "textarea",
+              "id": "main_description",
+              "label": "Main Description",
+              "default": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "category": "Custom Sections"
+        }
+      ],
+      "max_blocks": 6
+    }
+    {% endschema %}
+    
