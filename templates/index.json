@@ -101,6 +101,56 @@
         "specification_text": "View our Specification Sheet",
         "icon_class": "fas  fa-file-pdf"
       }
+    },
+    "listing_location_Ukhfqi": {
+      "type": "listing-location",
+      "blocks": {
+        "listing_one_yDmCip": {
+          "type": "listing_one",
+          "settings": {
+            "item_1": "Milwaukee, W",
+            "item_2": "Milwaukee, W",
+            "item_3": "Milwaukee, W",
+            "item_4": "Milwaukee, W",
+            "item_5": "Milwaukee, W",
+            "item_6": "Milwaukee, W"
+          }
+        },
+        "listing_two_ADDxqY": {
+          "type": "listing_two",
+          "settings": {
+            "item_1": "Milwaukee, W",
+            "item_2": "Milwaukee, W",
+            "item_3": "Milwaukee, W",
+            "item_4": "Milwaukee, W",
+            "item_5": "Milwaukee, W",
+            "item_6": "Milwaukee, W"
+          }
+        },
+        "listing_three_DAFbTr": {
+          "type": "listing_three",
+          "settings": {
+            "item_1": "Milwaukee, W",
+            "item_2": "Milwaukee, W",
+            "item_3": "Milwaukee, W",
+            "item_4": "Milwaukee, W",
+            "item_5": "Milwaukee, W",
+            "item_6": "Milwaukee, W"
+          }
+        }
+      },
+      "block_order": [
+        "listing_one_yDmCip",
+        "listing_two_ADDxqY",
+        "listing_three_DAFbTr"
+      ],
+      "settings": {
+        "title_listing": "We are proud to be the certified installer for:",
+        "button_one_text": "Inquire for Pricing",
+        "button_one_url": "https://admin.shopify.com/",
+        "button_two_text": "Book a Call",
+        "button_two_url": "https://admin.shopify.com/"
+      }
     }
   },
   "order": [
@@ -108,6 +158,7 @@
     "automotive_banner_769WMx",
     "image_divider_A6kdin",
     "warranty_section_d3M4D3",
-    "prime_offering_home_v3_qwBrL8"
+    "prime_offering_home_v3_qwBrL8",
+    "listing_location_Ukhfqi"
   ]
 }
