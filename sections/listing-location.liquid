@@ -112,7 +112,8 @@
                 <div class="col-md-4">
                     <ul class="listing">
                         {% for i in (1..6) %}
-                            {% assign item = block.settings["item_" | append: i | prepend: ""] %}
+                            {% capture item_key %}item_{{ i }}{% endcapture %}
+                            {% assign item = block.settings[item_key] %}
                             {% if item %}
                                 <li>{{ item }}</li>
                             {% endif %}
