@@ -44,12 +44,70 @@
         "TextThree": "The warranty is transferable and will continue with the car even in the event the ownership change.",
         "banner_image": "shopify://shop_images/image_5_9b5235c7-7e00-46d0-93c4-9e9aa9c849a5.png"
       }
+    },
+    "prime_offering_home_v3_qwBrL8": {
+      "type": "prime-offering-home-v3",
+      "blocks": {
+        "content_block_Hb6aLG": {
+          "type": "content_block",
+          "settings": {
+            "main_title": "PRIME X Series",
+            "main_description": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+          }
+        },
+        "content_block_4XLxyG": {
+          "type": "content_block",
+          "settings": {
+            "main_title": "PRIME X Series",
+            "main_description": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+          }
+        },
+        "content_block_bECMrR": {
+          "type": "content_block",
+          "settings": {
+            "main_title": "PRIME X Series",
+            "main_description": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+          }
+        },
+        "content_block_QeFHwp": {
+          "type": "content_block",
+          "settings": {
+            "main_title": "PRIME X Series",
+            "main_description": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+          }
+        },
+        "content_block_Upmn4a": {
+          "type": "content_block",
+          "settings": {
+            "main_title": "PRIME X Series",
+            "main_description": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_Hb6aLG",
+        "content_block_4XLxyG",
+        "content_block_bECMrR",
+        "content_block_QeFHwp",
+        "content_block_Upmn4a"
+      ],
+      "settings": {
+        "logo_image": "shopify://shop_images/fb8c4af86107226a7a6b0577268ce7fb.png",
+        "banner_title": "PRIME International Offerings",
+        "banner_description": "See the road in a whole new light with XPEL PRIME. Our window film is specifically curated to each region, so you can find the best fit for your vehicle.",
+        "button_url": "Enter URL Here",
+        "button_text": "Schedule a Call",
+        "specification_sheet_url": "Enter URL Here",
+        "specification_text": "View our Specification Sheet",
+        "icon_class": "fas  fa-file-pdf"
+      }
     }
   },
   "order": [
     "featured-collection",
     "automotive_banner_769WMx",
     "image_divider_A6kdin",
-    "warranty_section_d3M4D3"
+    "warranty_section_d3M4D3",
+    "prime_offering_home_v3_qwBrL8"
   ]
 }
