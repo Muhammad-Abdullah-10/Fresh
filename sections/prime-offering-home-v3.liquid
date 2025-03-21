@@ -167,83 +167,85 @@
 
 {% schema %}
     {
-      "name": "Prime Offering Section",
+  "name": "Prime Offering Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "PRIME International Offerings"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_description",
+      "label": "Banner Description",
+      "default": "See the road in a whole new light with XPEL PRIME. Our window film is specifically curated to each region, so you can find the best fit for your vehicle."
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Schedule a Call"
+    },
+    {
+      "type": "url",
+      "id": "specification_sheet_url",
+      "label": "Specification Sheet URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "specification_text",
+      "label": "Specification Text",
+      "default": "View our Specification Sheet"
+    },
+    {
+      "type": "text",
+      "id": "icon_class",
+      "label": "Font Awesome Icon Class",
+      "default": "fas fa-file-pdf"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "logo_image",
-          "label": "Logo Image"
-        },
-        {
           "type": "text",
-          "id": "banner_title",
-          "label": "Banner Title",
-          "default": "PRIME International Offerings"
+          "id": "main_title",
+          "label": "Main Title",
+          "default": "PRIME X Series"
         },
         {
           "type": "textarea",
-          "id": "banner_description",
-          "label": "Banner Description",
-          "default": "See the road in a whole new light with XPEL PRIME. Our window film is specifically curated to each region, so you can find the best fit for your vehicle."
-        },
-        {
-          "type": "url",
-          "id": "button_url",
-          "label": "Button URL",
-          "default": "#"
-        },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Text",
-          "default": "Schedule a Call"
-        },
-        {
-          "type": "url",
-          "id": "specification_sheet_url",
-          "label": "Specification Sheet URL",
-          "default": "#"
-        },
-        {
-          "type": "text",
-          "id": "specification_text",
-          "label": "Specification Text",
-          "default": "View our Specification Sheet"
-        },
-        {
-          "type": "text",
-          "id": "icon_class",
-          "label": "Font Awesome Icon Class",
-          "default": "fas fa-file-pdf"
+          "id": "main_description",
+          "label": "Main Description",
+          "default": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
         }
-      ],
-      "blocks": [
-        {
-          "type": "content_block",
-          "name": "Content Block",
-          "settings": [
-            {
-              "type": "text",
-              "id": "main_title",
-              "label": "Main Title",
-              "default": "PRIME X Series"
-            },
-            {
-              "type": "textarea",
-              "id": "main_description",
-              "label": "Main Description",
-              "default": "Our nano-ceramic window film acts as a barrier to heat with maximum UV protection and a wide range of VLTs for added privacy. Available in China."
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Default",
-          "category": "Custom Sections"
-        }
-      ],
-      "max_blocks": 6
+      ]
     }
-    {% endschema %}
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom Sections"
+    }
+  ],
+  "max_blocks": 6
+}
+
+
+{% endschema %}
     
