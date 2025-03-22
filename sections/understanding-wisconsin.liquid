@@ -110,7 +110,7 @@ style="background: url('{{ section.settings.background_image_wis |  file_url   }
             </p>
         </div>
         <div class="col-sm-12 col-lg-6 understanding-content-right">
-            <img class="understanding-image" src="./we-understand.png" alt="">
+            <img class="understanding-image" src="{{ section.settings.main_banner_image |  asset_url}}" alt="Window Tint Image">
         </div>
     </div>
 </section>
@@ -136,6 +136,11 @@ style="background: url('{{ section.settings.background_image_wis |  file_url   }
             "label": "Red Heading",
             "default": "At Detail Doctors, we prioritize your compliance with Wisconsin’s window tint regulations. It’s essential to be informed about the laws governing window tinting to ensure a smooth driving experience. Here’s a breakdown of Wisconsin’s window tint laws:"
         },
+        {
+            "type": "image_picker",
+            "id": "main_banner_image",
+            "label": "Image Right"
+        }
 
     ],
     "presets": [
