@@ -83,7 +83,7 @@
 
 
 <section class="understanding-wisconsin container-fluid" 
-style="background: url('{{ section.settings.background_image_wis |  file_url   }}');background-position: top center; background-size: cover;">
+style="background: url('{{ section.settings.background_image_wis |  image_url : 'original'   }}');background-position: top center; background-size: cover;">
     <div class="absolute-bg-white"></div>
     <div class="title d-flex justify-content-center">
         <h2>{{  section.settings.title_title_wis }}</h2>
@@ -110,7 +110,7 @@ style="background: url('{{ section.settings.background_image_wis |  file_url   }
             </p>
         </div>
         <div class="col-sm-12 col-lg-6 understanding-content-right">
-            <img class="understanding-image" src="{{ section.settings.main_banner_image |  asset_url}}" alt="Window Tint Image">
+            <img class="understanding-image" src="{{ section.settings.main_banner_image |  image_url : 'original' }}" alt="Window Tint Image">
         </div>
     </div>
 </section>
