@@ -151,6 +151,10 @@
         "button_two_text": "Book a Call",
         "button_two_url": "https://admin.shopify.com/"
       }
+    },
+    "understanding_wisconsin_8U7wRW": {
+      "type": "understanding-wisconsin",
+      "settings": {}
     }
   },
   "order": [
@@ -159,6 +163,7 @@
     "image_divider_A6kdin",
     "warranty_section_d3M4D3",
     "prime_offering_home_v3_qwBrL8",
-    "listing_location_Ukhfqi"
+    "listing_location_Ukhfqi",
+    "understanding_wisconsin_8U7wRW"
   ]
 }
