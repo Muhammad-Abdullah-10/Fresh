@@ -154,7 +154,11 @@
     },
     "understanding_wisconsin_8U7wRW": {
       "type": "understanding-wisconsin",
-      "settings": {}
+      "settings": {
+        "background_image_wis": "shopify://shop_images/IMG_8384_b0695636-67c3-499a-b735-b85d308b8c90.jpg",
+        "title_title_wis": "Understanding Wisconsin Window Tint Laws",
+        "red_heading_wis": "At Detail Doctors, we prioritize your compliance with Wisconsin’s window tint regulations. It’s essential to be informed about the laws governing window tinting to ensure a smooth driving experience. Here’s a breakdown of Wisconsin’s window tint laws:"
+      }
     }
   },
   "order": [
