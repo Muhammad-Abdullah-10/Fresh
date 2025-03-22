@@ -1,0 +1,131 @@
+<style>
+/* understanding-wisconsin */
+.understanding-wisconsin {
+    padding: 5%;
+    position: relative;
+}
+.understanding-wisconsin .absolute-bg-white{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    opacity: 0.9;
+    z-index: 10;
+}
+.understanding-wisconsin .title h2{
+    color: #000;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    z-index: 100;
+}
+.understanding-wisconsin .two-side-content{
+    padding: 0 10% 0 5%;
+    justify-content: space-between;
+}
+.understanding-wisconsin .two-side-content ,.understanding-wisconsin .two-side-content *{
+    z-index: 100;
+}
+.understanding-wisconsin .two-side-content h3{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    line-height: 26px;
+    color: #dd140e; 
+}
+.understanding-wisconsin .two-side-content p{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+}
+.understanding-content-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.understanding-content-right .understanding-image{
+    object-fit: cover;
+    height: 100%;
+    max-height: 800px;
+    max-width: 500px;
+
+}
+@media (max-width:991px){
+    .understanding-content-right{
+        justify-content: center;
+    }
+    .understanding-content-right .understanding-image{
+        max-width: 100%;
+    }
+}
+@media (max-width:767px){
+    .understanding-wisconsin{
+        padding: 50px 10px;
+    }
+    .understanding-wisconsin .title h2{
+        font-size: 40px;
+    }
+    .understanding-wisconsin .two-side-content{
+        padding: 20px 15px;
+    }
+}
+
+</style>
+
+
+<section class="understanding-wisconsin container-fluid" 
+style="background: url('./IMG_8384.JPG');background-position: top center; background-size: cover;">
+    <div class="absolute-bg-white"></div>
+    <div class="title d-flex justify-content-center">
+        <h2>Understanding Wisconsin Window Tint Laws</h2>
+    </div>
+    <div class="row two-side-content py-5 flex-column flex-lg-row">
+        <div class="col-sm-12 col-lg-6 understanding-content-left">
+            <h3 class="understanding-heading-red">
+                At Detail Doctors, we prioritize your compliance with Wisconsin’s window tint regulations. It’s essential to be informed about the laws governing window tinting to ensure a smooth driving experience. Here’s a breakdown of Wisconsin’s window tint laws:
+            </h3>
+            <p>
+                <br>Legal Requirements:<br>
+                Windshield: Non-reflective tint is permissible above the AS-1 line specified by the manufacturer.<br>
+                Front Side Windows: Must allow over 50% Visible Light Transmission (VLT).<br>
+                Back Side Windows and Rear Windshield: Must allow more than 35% VLT.<br><br>
+
+                History: Wisconsin established these car window tinting laws back in 1996 to ensure road safety and visibility standards.<br><br>
+
+                Understanding VLT: VLT, or Visible Light Transmission, indicates the percentage of light allowed through your car windows. It’s crucial to note that these percentages differ for sedans and larger vehicles like SUVs or vans.<br><br>
+
+                Tint Darkness for Sedans:• Windshield: Non-reflective tint above the AS-1 line.• Front Side Windows: Must permit more than 50% of light.• Back Side Windows and Rear Window: Must allow over 35% of light.<br>
+                For a comprehensive understanding of Wisconsin’s additional window tinting rules and regulations, delve into the detailed information below.<br><br>
+
+                Stay Compliant, Drive Confidently: We’ve equipped you with all the necessary insights about your car’s window tinting to ensure adherence to Wisconsin laws. Drive safely and confidently knowing your window tint meets state regulations.<br><br>
+            </p>
+        </div>
+        <div class="col-sm-12 col-lg-6 understanding-content-right">
+            <img class="understanding-image" src="./we-understand.png" alt="">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Understanding Wisconsin",
+    "settings": [
+        
+    ],
+    "presets": [
+        {
+        "name": "Understanding Wisconsin",
+        "category": "Custom Sections"
+        }
+    ]
+}
+{% endschema %}
