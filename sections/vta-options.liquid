@@ -223,12 +223,12 @@
 
 <section class="vlt-1-offering container-fluid">
     <div class="d-flex row justify-content-center justify-content-lg-end justify-content-md-center vlt-1-logo-top">
-        {% if section.settings.top_logo_1 %}
-            <img src="{{ section.settings.top_logo_1 | img_url: 'original' }}" alt="" class="img-fluid">        
+        {% if section.settings.top_logo_one %}
+            <img src="{{ section.settings.top_logo_one | img_url: 'original' }}" alt="" class="img-fluid">        
         {% endif %}    
     
-        {% if section.settings.top_logo_2 %}
-            <img src="{{ section.settings.top_logo_2 | img_url: 'original' }}" alt="" class="img-fluid">
+        {% if section.settings.top_logo_one %}
+            <img src="{{ section.settings.top_logo_two | img_url: 'original' }}" alt="" class="img-fluid">
         {% endif %}
     </div>
 
@@ -299,13 +299,13 @@
   "settings": [
     {
         "type": "image_picker",
-        "id": "top_logo_1",
+        "id": "top_logo_one",
         "label" : "Add Top Logo 1",
         "default" :""
     },
     {
         "type": "image_picker",
-        "id": "top_logo_2",
+        "id": "top_logo_two",
         "label" : "Add Top Logo 2",
         "default" :""
     },
