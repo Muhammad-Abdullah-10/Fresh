@@ -257,8 +257,9 @@
     <hr class="my-2 w-50 mr-auto ml-auto"> 
 
     <div class="vlt-1-main-content p-lg-3 flex-md-column flex-lg-row">
-        {% for block in section.blocks %}
-            <div>
+       
+            <div> 
+                {% for block in section.blocks %}
                 <div class="vlt-1-main-content-wrapper row">
                     <div class="col-2 align-self-start">
                         <img src="{{ block.settings.feature_icon | img_url: 'medium' }}" alt="" class="img-fluid">
@@ -272,21 +273,23 @@
                         </p>
                     </div>
                 </div>
+            {% endfor %}
             </div>
-            <div>
-                <div class="vlt-1-main-content-dropdown-wrapper row">
-                    <div class="content-listing-wrapper row">
-                        <h3><span>{{ section.blocks[0].settings.select_title }}</span> is available</h3>
-                        <select name="" id="">
-                            {% assign options = section.blocks[0].settings.select_options | split: ',' %}
-                            {% for option in options %}
-                                <option value="{{ option | strip }}">{{ option | strip }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
+      
+      
+        <div>
+            <div class="vlt-1-main-content-dropdown-wrapper row">
+                <div class="content-listing-wrapper row">
+                    <h3><span>{{ section.blocks[0].settings.select_title }}</span> is available</h3>
+                    <select name="" id="">
+                        {% assign options = section.blocks[0].settings.select_options | split: ',' %}
+                        {% for option in options %}
+                            <option value="{{ option | strip }}">{{ option | strip }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
-        {% endfor %}
+        </div>
         
 
     </div>
