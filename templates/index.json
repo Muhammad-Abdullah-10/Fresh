@@ -171,7 +171,7 @@
           "type": "select_dropdown",
           "settings": {
             "select_title": "PRIME XR PLUS",
-            "select_options": "5, 15, 20, 35"
+            "select_options": "5, 15, 20, 35 , 45 ,50 , 75"
           }
         },
         "select_dropdown_8RCNHF": {
@@ -203,10 +203,13 @@
         "feature_icon_2": "shopify://shop_images/tabler_eyeglass.png",
         "feature_title_2": "Reduces Glare",
         "feature_description_2": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain.",
+        "feature_icon_3": "shopify://shop_images/tabler_eyeglass.png",
         "feature_title_3": "Reduces Glare",
         "feature_description_3": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain.",
+        "feature_icon_4": "shopify://shop_images/tabler_eyeglass.png",
         "feature_title_4": "Reduces Glare",
         "feature_description_4": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain.",
+        "feature_icon_5": "shopify://shop_images/tabler_eyeglass.png",
         "feature_title_5": "Reduces Glare",
         "feature_description_5": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain."
       }
