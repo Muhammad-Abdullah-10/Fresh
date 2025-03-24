@@ -235,7 +235,7 @@
             {{ section.settings.section_title }}
         </h2>
         <p class="vlt-1-para">
-            {{ section.settings.section_description }}
+            {{ section.settings.section_description_top }}
         </p>
         <a class="vlt-1-btn-red-rounded-home-v3" href="{{ section.settings.button_schedule_url }}">
             {{ section.settings.button_schedule_text }}
@@ -306,6 +306,36 @@
         </div>
 
         <div class="col-12 col-md-6">
+            <div class="vlt-1-main-content-wrapper row">
+                {% if section.settings.feature_icon_4 %}
+                    <div class="col-2 align-self-start">
+                        <img src="{{ section.settings.feature_icon_4 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    </div>
+                {% endif %}
+                <div class="col-10">
+                    <h2>
+                        {{ section.settings.feature_title_4 }}
+                    </h2>
+                    <p>
+                        {{ section.settings.feature_description_4 }}
+                    </p>
+                </div>
+            </div>
+            <div class="vlt-1-main-content-wrapper row">
+                {% if section.settings.feature_icon_5 %}
+                    <div class="col-2 align-self-start">
+                        <img src="{{ section.settings.feature_icon_5 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    </div>
+                {% endif %}
+                <div class="col-10">
+                    <h2>
+                        {{ section.settings.feature_title_5 }}
+                    </h2>
+                    <p>
+                        {{ section.settings.feature_description_5 }}
+                    </p>
+                </div>
+            </div>
             <div class="vlt-1-main-content-dropdown-wrapper row">
                 {% for block in section.blocks %}
                     <div class="content-listing-wrapper row">
@@ -346,7 +376,7 @@
     },
     {
       "type": "textarea",
-      "id": "section_description",
+      "id": "section_description_top",
       "label": "Section Description",
       "default": "Safety and stability. Cut out the glare, protect your skin from harmful UV rays, and make any journey that much more enjoyable."
     },
@@ -438,10 +468,32 @@
       "default": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain."
     },
     {
+      "type": "image_picker",
+      "id": "feature_icon_4",
+      "label": "Feature Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "feature_title_4",
+      "label": "Feature Title 4",
+      "default": "Reduces Glare"
+    },
+    {
       "type": "textarea",
       "id": "feature_description_4",
       "label": "Feature Description 4",
       "default": "Cuts down on the sun's glare, enhancing visibility and reducing eye strain."
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon_5",
+      "label": "Feature Icon 5"
+    },
+    {
+      "type": "text",
+      "id": "feature_title_5",
+      "label": "Feature Title 5",
+      "default": "Reduces Glare"
     },
     {
       "type": "textarea",
