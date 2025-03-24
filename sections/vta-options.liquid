@@ -78,8 +78,8 @@
 }
 
 .vlt-1-offering .vlt-1-main-content{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top: 30px;
     max-width: 90%;
     margin-left: auto;
@@ -273,21 +273,22 @@
                     </div>
                 </div>
             </div>
-        {% endfor %}
-        
-        <div>
-            <div class="vlt-1-main-content-dropdown-wrapper row">
-                <div class="content-listing-wrapper row">
-                    <h3><span>{{ section.blocks[0].settings.select_title }}</span> is available</h3>
-                    <select name="" id="">
-                        {% assign options = section.blocks[0].settings.select_options | split: ',' %}
-                        {% for option in options %}
-                            <option value="{{ option | strip }}">{{ option | strip }}</option>
-                        {% endfor %}
-                    </select>
+            <div>
+                <div class="vlt-1-main-content-dropdown-wrapper row">
+                    <div class="content-listing-wrapper row">
+                        <h3><span>{{ section.blocks[0].settings.select_title }}</span> is available</h3>
+                        <select name="" id="">
+                            {% assign options = section.blocks[0].settings.select_options | split: ',' %}
+                            {% for option in options %}
+                                <option value="{{ option | strip }}">{{ option | strip }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
+        
+
     </div>
 </section>
 
