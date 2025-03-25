@@ -161,33 +161,37 @@
 </style>
 
 <section class="blog-wrapper container-fluid">
-    {% for article in blog.articles %}
+   {% assign blog = blogs['news'] %} 
+  <!-- Loop through blog articles with pagination (Shopify handles pagination automatically) -->
+  {% for article in blog.articles %}
     <div class="row blog-row">
         <div class="col-sm-12 col-md-5 blog-img-section">
-            {%  if article.image %}  
-                <img src="{{ article.image |  img_url: 'medium' }}" class="img-fluid" alt="{{ article.image.alt |  escape }}">
-            {% endif %} 
-            
+            {% if article.image %}
+                <img src="{{ article.image | img_url: 'medium' }}" class="img-fluid" alt="{{ article.image.alt | escape }}">
+            {% endif %}
         </div>
         <div class="col-sm-12 col-md-7 blog-content-section">
             <div class="blog-author">
-                <img src="{{ section.settings.user_icon |  img_url : 'medium' }}" class="img-fluid" alt="user-icon">
+                <img src="{{ section.settings.user_icon | img_url : 'medium' }}" class="img-fluid" alt="user-icon">
                 {{ article.author }}
             </div>
             <h2 class="blog-title">
                 <a href="{{ article.url }}">
                     {{ article.title }}
                 </a>
-                
             </h2>
             <div class="blog-details">
                 <div class="blog-date">
-                    <img src="{{ section.settings.date_icon |  img_url : 'medium' }}" alt="calendar-icon">
-                    {{ article.created_at }}
+                    <img src="{{ section.settings.date_icon | img_url : 'medium' }}" alt="calendar-icon">
+                    {{ article.created_at | date: "%B %d, %Y"  }}
                 </div>
                 <div class="blog-comment">
-                    <img src="{{ section.settings.comment_icon |  img_url : 'medium' }}" alt="message-icon">
-                   {{ article.comment_post_url }}
+                  <img src="{{ section.settings.comment_icon | img_url : 'medium' }}" alt="message-icon">
+                  <a href="{{ article.comment_post_url }}">
+                    Leave a Comment
+                  </a>
+                    
+                    
                 </div>
             </div>
             <div class="blog-desc">
@@ -196,12 +200,27 @@
                 </p>
             </div>
             <div class="blog-posted-in">
-                Posted In <span>{{  }}</span>
+                Posted In <span>{{ article.blog.title }}</span>
             </div>
             <a class="read-more-button" href="{{ article.url }}">Read More</a>
         </div>
     </div>
-     {% endfor %}
+  {% endfor %}
+
+  <!-- Pagination controls (only show if there are multiple pages) -->
+  {% if paginate.pages > 1 %}
+    <div class="pagination">
+      {% if paginate.previous %}
+        <a href="{{ paginate.previous.url }}" class="prev">Previous</a>
+      {% endif %}
+      <span class="page-info">
+        Page {{ paginate.page }} of {{ paginate.pages }}
+      </span>
+      {% if paginate.next %}
+        <a href="{{ paginate.next.url }}" class="next">Next</a>
+      {% endif %}
+    </div>
+  {% endif %}
 </section>
 
 
@@ -210,6 +229,9 @@
     "name": "Blogs Section",
     "settings": [
         {
+          
+        }
+          ,{
             "type": "image_picker",
             "id": "user_icon",
             "label": "User Icon"
@@ -224,7 +246,6 @@
             "id": "comment_icon",
             "label": "Comment Icon"
         }
-
     ],
     "presets": [
         {
@@ -232,6 +253,5 @@
             "category": "Custom Sections"
         }
     ]
-
 }
 {% endschema %}
