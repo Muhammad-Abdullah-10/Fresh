@@ -227,7 +227,11 @@
     },
     "blog_section_home_yUdHgm": {
       "type": "blog-section-home",
-      "settings": {}
+      "settings": {
+        "user_icon": "shopify://shop_images/mdi_user.png",
+        "date_icon": "shopify://shop_images/majesticons_calendar.png",
+        "comment_icon": "shopify://shop_images/mingcute_comment-fill.png"
+      }
     }
   },
   "order": [
