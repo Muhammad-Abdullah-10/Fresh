@@ -161,39 +161,47 @@
 </style>
 
 <section class="blog-wrapper container-fluid">
+    {% for article in blog.articles %}
     <div class="row blog-row">
         <div class="col-sm-12 col-md-5 blog-img-section">
-            <img src="./blog-banner.png" class="img-fluid" alt="">
+            {%  if article.image %}  
+                <img src="{{ article.image |  img_url: 'medium' }}" class="img-fluid" alt="{{ article.image.alt |  escape }}">
+            {% endif %} 
+            
         </div>
         <div class="col-sm-12 col-md-7 blog-content-section">
             <div class="blog-author">
-                <img src="./mdi_user.png" class="img-fluid" alt="">
-                By Donato Salvo
+                <img src="{{ section.settings.user_icon |  img_url : 'medium' }}" class="img-fluid" alt="user-icon">
+                {{ article.author }}
             </div>
             <h2 class="blog-title">
-                XPEL Fusion Plus Satin: Top-tier Protection for Satin Paint Vehicles
+                <a href="{{ article.url }}">
+                    {{ article.title }}
+                </a>
+                
             </h2>
             <div class="blog-details">
                 <div class="blog-date">
-                    <img src="./majesticons_calendar.png" alt="">
-                     23 Aug 25, 2023
+                    <img src="{{ section.settings.date_icon |  img_url : 'medium' }}" alt="calendar-icon">
+                    {{ article.created_at }}
                 </div>
                 <div class="blog-comment">
-                    <img src="./mingcute_comment-fill.png" alt="">
-                    Leave a Comment
+                    <img src="{{ section.settings.comment_icon |  img_url : 'medium' }}" alt="message-icon">
+                   {{ article.comment_post_url }}
                 </div>
             </div>
             <div class="blog-desc">
                 <p>
-                    Whether it's your wheels, the interior, the trim, or that spectacular exterior paint, XPEL has a solution.
+                    {{ article.content | strip_html | truncatewords: 15 }}
                 </p>
             </div>
             <div class="blog-posted-in">
-                Posted In <span>automotive</span>
+                Posted In <span>{{  }}</span>
             </div>
-            <a class="read-more-button" href="#">Read More</a>
+            <a class="read-more-button" href="{{ article.url }}">Read More</a>
         </div>
     </div>
+     {% endfor %}
 </section>
 
 
@@ -201,7 +209,22 @@
 {
     "name": "Blogs Section",
     "settings": [
-        
+        {
+            "type": "image_picker",
+            "id": "user_icon",
+            "label": "User Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "date_icon",
+            "label": "Date Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "comment_icon",
+            "label": "Comment Icon"
+        }
+
     ],
     "presets": [
         {
