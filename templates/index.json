@@ -224,6 +224,14 @@
         "title": "Your Car Just Got Cooler",
         "cooler_description": "Feel the difference, before and after. Before installation of XPEL Automotive Window Film, your car’s cabin could reach scorching temps. After application, enjoy up to 60% less heat inside, providing a cooler and more enjoyable ride."
       }
+    },
+    "blog_section_home_yUdHgm": {
+      "type": "blog-section-home",
+      "settings": {
+        "user_icon": "shopify://shop_images/mdi_user.png",
+        "date_icon": "shopify://shop_images/majesticons_calendar.png",
+        "comment_icon": "shopify://shop_images/mingcute_comment-fill.png"
+      }
     }
   },
   "order": [
@@ -235,6 +243,7 @@
     "listing_location_Ukhfqi",
     "understanding_wisconsin_8U7wRW",
     "vta_options_Ka8iy8",
-    "car_got_cooler_M9DDPz"
+    "car_got_cooler_M9DDPz",
+    "blog_section_home_yUdHgm"
   ]
 }
