@@ -166,7 +166,22 @@
 {% schema %}
     {
       "name": "Youtube Video Slider",
-      "settings": [],
+      "settings": [
+        {
+            "type": "header",
+            "content": "Arrow Navigation"
+        },
+        {
+           "type": "image_picker",
+           "id" : "arrow_left",
+           "label": "Arrow Left"
+        },
+        {
+            "type": "image_picker",
+            "id" : "arrow_right",
+            "label": "Arrow Right"
+         }
+      ],
       "blocks": [
         {
           "type": "video",
@@ -181,7 +196,7 @@
               "type": "textarea",
               "label": "Video Embed Code",
               "id": "video_embed_code",
-              "default": "Enter Embed link Here",
+              "default": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
               "info": "Paste the full YouTube embed code here"
             },
             {
@@ -189,20 +204,6 @@
               "label": "Video Title",
               "id": "video_title",
               "default": "Video Title"
-            },
-            {
-                "type": "header",
-                "content": "Arrow Navigation"
-            },
-            {
-                "type": "image_picker",
-                "id" : "arrow_left",
-                "label": "Arrow Left"
-            },
-            {
-                "type": "image_picker",
-                "id" : "arrow_right",
-                "label": "Arrow Right"
             }
           ]
         }
