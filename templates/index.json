@@ -250,7 +250,9 @@
           "type": "video",
           "settings": {
             "video_embed_code": "Enter Embed link Here",
-            "video_title": "Video Title"
+            "video_title": "Video Title",
+            "arrow_left": "shopify://shop_images/arrow-left.png",
+            "arrow_right": "shopify://shop_images/arrow-right.png"
           }
         },
         "video_xpHQi8": {
