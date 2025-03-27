@@ -228,9 +228,86 @@
     "blog_section_home_yUdHgm": {
       "type": "blog-section-home",
       "settings": {
+        "blog_handle": "news",
         "user_icon": "shopify://shop_images/mdi_user.png",
         "date_icon": "shopify://shop_images/majesticons_calendar.png",
         "comment_icon": "shopify://shop_images/mingcute_comment-fill.png"
+      }
+    },
+    "video_slider_UCUyKR": {
+      "type": "video-slider",
+      "blocks": {
+        "video_GcNTyP": {
+          "type": "video",
+          "settings": {
+            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
+            "product": "",
+            "collection": ""
+          }
+        },
+        "video_8a4BAE": {
+          "type": "video",
+          "settings": {
+            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
+            "product": "",
+            "collection": ""
+          }
+        },
+        "video_mJybbb": {
+          "type": "video",
+          "settings": {
+            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
+            "product": "",
+            "collection": ""
+          }
+        },
+        "video_QDjWRK": {
+          "type": "video",
+          "settings": {
+            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
+            "product": "",
+            "collection": ""
+          }
+        },
+        "video_bwwGjH": {
+          "type": "video",
+          "settings": {
+            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
+            "product": "",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_GcNTyP",
+        "video_8a4BAE",
+        "video_mJybbb",
+        "video_QDjWRK",
+        "video_bwwGjH"
+      ],
+      "settings": {
+        "slide_width": 300,
+        "image_crop": "none",
+        "aspect_ratio": "9:16",
+        "autoplay": 8,
+        "gap": 10,
+        "show_arrows": false,
+        "text_size": 100,
+        "text_alignment": "left",
+        "text_color": "#121212",
+        "border_color": "#121212",
+        "background_color": "",
+        "border_radius": 10,
+        "base_width": 100,
+        "max_width": "",
+        "inner_padding": 40,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "anchor_id": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
       }
     }
   },
@@ -244,6 +321,7 @@
     "understanding_wisconsin_8U7wRW",
     "vta_options_Ka8iy8",
     "car_got_cooler_M9DDPz",
-    "blog_section_home_yUdHgm"
+    "blog_section_home_yUdHgm",
+    "video_slider_UCUyKR"
   ]
 }
