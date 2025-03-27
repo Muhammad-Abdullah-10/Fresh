@@ -1,0 +1,218 @@
+<style>
+    /* Swiper Videos */
+    /* General styles for the video slider */
+    .video-wrapper {
+        background: #000;
+        padding: 5% 10%;
+    }
+
+    .video-wrapper .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-wrapper .container-custom {
+        max-width: 100%;
+    }
+
+    .video-wrapper .container-custom h3 {
+        color: #fff;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 42.75px;
+        line-height: 52.8px;
+        letter-spacing: -0.48px;
+        vertical-align: middle;
+    }
+
+    .video-wrapper .container-custom .swiper-wrapper {
+        padding: 50px 0;
+    }
+
+    .video-wrapper .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* background: #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        /* background-color: #333; */
+    }
+
+    .video-wrapper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        /* background: #333; */
+        object-fit: cover;
+    }
+
+    .video-slider .swiper-button-next {
+        right: 0%;
+        z-index: 100;
+        background: #fff;
+        border-radius: 100%;
+    }
+
+    .video-slider .video-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .video-area {
+        width: 100%;
+    }
+
+    .video-slider .video-slide .content-area {
+        width: 95%;
+        margin-right: auto;
+    }
+
+    .video-slider .video-slide .content-area h3 {
+        color: #fff;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 35.2px;
+        letter-spacing: -0.32px;
+        text-align: left;
+
+    }
+
+    .wrapper-swiper .swiper-button-next:after,
+    .wrapper-swiper .swiper-rtl .swiper-button-prev:after,
+    .wrapper-swiper .swiper-button-prev:after,
+    .wrapper-swiper .swiper-rtl .swiper-button-next:after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .wrapper-swiper .swiper-button-next img,
+    .wrapper-swiper .swiper-button-prev img {
+        /* margin-top: 50px; */
+        max-width: 40px;
+    }
+
+    @media (max-width:1300px) {
+        .video-wrapper {
+            padding: 5% 30px;
+        }
+    }
+
+    @media (max-width:991px) {
+        .video-wrapper {
+            padding: 5%;
+        }
+    }
+</style>
+
+<div class="video-wrapper container-fluid">
+    <div class="container container-custom position-relative wrapper-swiper">
+        <h3 class="container container-custom ">Explore Videos</h3>
+        <div class="swiper video-slider container-custom">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    <!-- slide -->
+                    <div class="video-slide swiper-slide">
+                        <div class="video-area">
+                            <iframe width="100%" height="350px" src="{{ block.settings.video_embed_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="content-area">
+                            <h3>{{ block.settings.video_title }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="swiper-button-next">
+            <img src="{{ seciton.settings.arrow_right | img_url  }}" alt="Next">
+        </div>
+        <div class="swiper-button-prev">
+            <img src="{{ seciton.settings.left | img_url  }}" alt="Previous">
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".video-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+
+
+{% schema %}
+    {
+      "name": "Video Slider",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "video",
+          "name": "Video",
+          "settings": [
+            {
+                "type": "header",
+                "content": "Embeded Video",
+                "info": "Make sure that the width of the embed video is 100% and height is 350px. Keep the px in the height section"
+            },
+            {
+              "type": "textarea",
+              "label": "Video Embed Code",
+              "id": "video_embed_code",
+              "default": "",
+              "info": "Paste the full YouTube embed code here"
+            },
+            {
+              "type": "text",
+              "label": "Video Title",
+              "id": "video_title",
+              "default": "Video Title"
+            },
+            {
+                "type": "header",
+                "content": "Arrow Navigation"
+            },
+            {
+                "type": "image_picker",
+                "id" : "arrow_left",
+                "label": "Arrow Left"
+            },
+            {
+                "type": "image_picker",
+                "id" : "arrow_right",
+                "label": "Arrow Right"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    
