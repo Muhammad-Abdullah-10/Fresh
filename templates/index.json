@@ -234,81 +234,39 @@
         "comment_icon": "shopify://shop_images/mingcute_comment-fill.png"
       }
     },
-    "video_slider_UCUyKR": {
-      "type": "video-slider",
+    "youtube_embed_n37UkG": {
+      "type": "youtube-embed",
       "blocks": {
-        "video_GcNTyP": {
+        "video_dafzxp": {
           "type": "video",
           "settings": {
-            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
-            "product": "",
-            "collection": ""
+            "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
+            "video_title": "Video Title",
+            "arrow_left": "shopify://shop_images/arrow-left.png",
+            "arrow_right": "shopify://shop_images/arrow-right.png"
           }
         },
-        "video_8a4BAE": {
+        "video_79kJHX": {
           "type": "video",
           "settings": {
-            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
-            "product": "",
-            "collection": ""
+            "video_embed_code": "Enter Embed link Here",
+            "video_title": "Video Title"
           }
         },
-        "video_mJybbb": {
+        "video_xpHQi8": {
           "type": "video",
           "settings": {
-            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
-            "product": "",
-            "collection": ""
-          }
-        },
-        "video_QDjWRK": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
-            "product": "",
-            "collection": ""
-          }
-        },
-        "video_bwwGjH": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/3245395-hd_1920_1080_25fps.mp4",
-            "product": "",
-            "collection": ""
+            "video_embed_code": "Enter Embed link Here",
+            "video_title": "Video Title"
           }
         }
       },
       "block_order": [
-        "video_GcNTyP",
-        "video_8a4BAE",
-        "video_mJybbb",
-        "video_QDjWRK",
-        "video_bwwGjH"
+        "video_dafzxp",
+        "video_79kJHX",
+        "video_xpHQi8"
       ],
-      "settings": {
-        "slide_width": 300,
-        "image_crop": "none",
-        "aspect_ratio": "9:16",
-        "autoplay": 8,
-        "gap": 10,
-        "show_arrows": false,
-        "text_size": 100,
-        "text_alignment": "left",
-        "text_color": "#121212",
-        "border_color": "#121212",
-        "background_color": "",
-        "border_radius": 10,
-        "base_width": 100,
-        "max_width": "",
-        "inner_padding": 40,
-        "outer_margin": 0,
-        "custom_css": "",
-        "mobile_custom_css": "",
-        "anchor_id": "",
-        "override_theme_font": false,
-        "heading_font": "serif",
-        "main_font": "sans-serif"
-      }
+      "settings": {}
     }
   },
   "order": [
@@ -322,6 +280,6 @@
     "vta_options_Ka8iy8",
     "car_got_cooler_M9DDPz",
     "blog_section_home_yUdHgm",
-    "video_slider_UCUyKR"
+    "youtube_embed_n37UkG"
   ]
 }
