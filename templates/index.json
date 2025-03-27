@@ -241,27 +241,43 @@
           "type": "video",
           "settings": {
             "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
-            "video_title": "Video Title"
+            "video_title": "The New XPEL ULTIMATE PLUS Paint Protection Film"
+          }
+        },
+        "video_JWjKiR": {
+          "type": "video",
+          "settings": {
+            "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
+            "video_title": "The New XPEL ULTIMATE PLUS Paint Protection Film"
           }
         },
         "video_79kJHX": {
           "type": "video",
           "settings": {
             "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
-            "video_title": "Video Title"
+            "video_title": "The New XPEL ULTIMATE PLUS Paint Protection Film"
+          }
+        },
+        "video_r4gEez": {
+          "type": "video",
+          "settings": {
+            "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
+            "video_title": "The New XPEL ULTIMATE PLUS Paint Protection Film"
           }
         },
         "video_xpHQi8": {
           "type": "video",
           "settings": {
             "video_embed_code": "https://www.youtube.com/embed/hI4lW8uNRqY?si=iu7sQFLQZAFVEwnJ",
-            "video_title": "Video Title"
+            "video_title": "The New XPEL ULTIMATE PLUS Paint Protection Film"
           }
         }
       },
       "block_order": [
         "video_dafzxp",
+        "video_JWjKiR",
         "video_79kJHX",
+        "video_r4gEez",
         "video_xpHQi8"
       ],
       "settings": {
