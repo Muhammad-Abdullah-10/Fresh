@@ -62,7 +62,7 @@
         max-width: 100vw;
         padding-left: 0;
         padding-right: 0;
-        padding: 20px 15px;
+        padding: 20px 25px;
     }
     .warranty-period-home-v3 .warranty-text-wrapper .content-wrapper .main-heading{
         max-width: 100svw;
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 warranty-image-wrapper p-0">
-                <img src="{{ section.settings.banner_image | image_url: width: '780px' , height: '600px'  }}" alt="">
+                <img src="{{ section.settings.banner_image | img_url : 'original'  }}?quality=100" alt="">
             </div>
         </div>
     </section>
