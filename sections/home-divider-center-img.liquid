@@ -1,0 +1,51 @@
+<style>
+  .homev3-image-banner-wrapper-center{
+    height: auto;
+    width: 100%;
+  }
+.homev3-image-banner-wrapper-center img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    bottom: 0;
+    display: block;
+    object-position: 0% 40%;
+}
+@media(max-width: 767px){
+  .homev3-image-banner-wrapper-center img {
+      object-fit: cover;
+        height:250px;
+  }
+}
+</style>
+
+<section class="homev3-image-banner-wrapper-center">
+  <img src="{{ section.settings.image | img_url: 'master' }}?quality=100" alt="{{ section.settings.alt_text }}">
+</section>
+
+
+{% schema %}
+{
+  "name": "Home Image Divider Center",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt Text",
+      "default": "Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Image Divider Center",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
