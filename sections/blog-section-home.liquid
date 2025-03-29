@@ -23,7 +23,7 @@
 
   .blog-wrapper .blog-row .blog-img-section img{
     height: 308px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .blog-wrapper .blog-row .blog-content-section{
@@ -192,7 +192,7 @@
     <div class="row blog-row">
         <div class="col-sm-12 col-md-5 blog-img-section">
             {% if article.image %}
-                <img src="{{ article.image | img_url: 'medium' }}" class="img-fluid" alt="{{ article.image.alt | escape }}">
+                <img src="{{ article.image | img_url: 'original' }}?quality=100" class="img-fluid" alt="{{ article.image.alt | escape }}">
             {% endif %}
         </div>
         <div class="col-sm-12 col-md-7 blog-content-section">
@@ -223,7 +223,8 @@
                 </p>
             </div>
             <div class="blog-posted-in">
-                Posted In <span>{{ article.blog.title }}</span>
+                <!-- Posted In <span>{{ article.blog.title }}</span> -->
+                Posted In <span>{{ article.tags }}</span>
             </div>
             <a class="read-more-button" href="{{ article.url }}">Read More</a>
         </div>
