@@ -77,7 +77,7 @@
     text-align: center;
     display: block;
     text-decoration: none;
-    width: 324px;
+    width: auto;
     height: 54px;
     border-radius: 100px;
     padding: 15px 40px;
@@ -88,6 +88,7 @@
     color: #dd140e;
     background: transparent;
 }
+
 @media (max-width:1350px) {
     .understanding-content-right .understanding-image{
         max-width: 375px;
@@ -121,6 +122,14 @@
     }
 }
 
+  .understanding-content-left p{
+  font-weight: 700 !important;
+    font-size: 16px;
+}
+ .understanding-content-left li{
+   font-weight: 400 !important;
+   font-size: 16px;
+ }
 </style>
 
 
@@ -136,8 +145,45 @@ style="background: url('{{ section.settings.background_image_wis |  img_url : 'o
                 {{ section.settings.red_heading_wis }}
             </h3>
             <p>
-               {{ section.settings.description_wis }}
+                
+                  Legal Requirements:
+                  <ul>
+                    <li style="font-weight:400;">
+                      Windshield: Non-reflective tint is permissible above the AS-1 line specified by the manufacturer.
+                    </li>
+                    <li style="font-weight:400;">
+                      Front Side Windows: Must allow over 50% Visible Light Transmission (VLT).
+                    </li>
+                    <li style="font-weight:400;">
+                      Back Side Windows and Rear Windshield: Must allow more than 35% VLT.
+                    </li>
+                  </ul>
             </p>
+          <p>
+                            History:<span style="font-weight : 400;"> Wisconsin established these car window tinting laws back in 1996 to ensure road safety and visibility standards.</span> 
+          </p>
+          <p>
+            Understanding VLT: <span style="font-weight : 400;">VLT, or Visible Light Transmission, indicates the percentage of light allowed through your car windows. It’s crucial to note that these percentages differ for sedans and larger vehicles like SUVs or vans.</span>
+          </p>
+           <p>
+              Tint Darkness for Sedans:
+                  <ul>
+                    <li style="font-weight:400;">
+                       Windshield: Non-reflective tint above the AS-1 line.
+                    </li>
+                    <li style="font-weight:400;">
+                      Front Side Windows: Must permit more than 50% of light.
+                    </li>
+                    <li style="font-weight:400;">
+                      Back Side Windows and Rear Window: Must allow over 35% of light.
+                    </li>
+                  </ul>
+              <span style="font-weight:400;"> For a comprehensive understanding of Wisconsin’s additional window tinting rules and regulations, delve into the detailed information below.</span>
+            </p>
+          <p>
+             Stay Compliant, Drive Confidently: <span style="font-weight:400;">We’ve equipped you with all the necessary insights about your car’s window tinting to ensure adherence to Wisconsin laws. Drive safely and confidently knowing your window tint meets state regulations.</span>
+          </p>
+
             <a class="understanding-content-left-btn-red-rounded-home-v3" href="{{ section.settings.button_url }}">
                 {{ section.settings.button_text }}
             </a>
