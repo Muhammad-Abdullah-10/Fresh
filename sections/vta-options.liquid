@@ -159,7 +159,15 @@
 .vlt-1-main-content-dropdown-wrapper .content-listing-wrapper select option{
     text-align: center;
 }
-
+  .vlt-1-main-content-dropdown-wrapper .content-listing-wrapper h3{
+  width:250px;
+}
+  
+/* .icon-resize img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+} */
 @media (max-width:991px) {
     .vlt-1-top-content{
         align-items: center;
@@ -205,6 +213,7 @@
     }
     .vlt-1-offering .vlt-1-top-content .view-sheet{
         padding-left: 0;
+      text-align: center;
     }
     .vlt-1-offering .vlt-1-main-content{
         display: grid;
@@ -224,6 +233,9 @@
         object-fit: contain;
         max-width: 200px;
         margin: 20px;
+    }
+      .vlt-1-main-content-dropdown-wrapper .content-listing-wrapper h3{
+      width:200px;
     }
 }
 
@@ -268,8 +280,8 @@
         <div class="col-12 col-md-6 p-0">
             <div class="vlt-1-main-content-wrapper row">
                 {% if section.settings.feature_icon_1 %}
-                    <div class="col-2 align-self-start">
-                        <img src="{{ section.settings.feature_icon_1 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    <div class="align-self-start col-2 d-flex justify-content-end icon-resize">
+                        <img src="{{ section.settings.feature_icon_1 | img_url: 'medium' }}?quality=100" alt="" class="img-fluid">
                     </div>
                 {% endif %}
                 <div class="col-10">
@@ -284,8 +296,8 @@
 
             <div class="vlt-1-main-content-wrapper row">
                 {% if section.settings.feature_icon_2 %}
-                    <div class="col-2 align-self-start">
-                        <img src="{{ section.settings.feature_icon_2 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    <div class="align-self-start col-2 d-flex justify-content-end icon-resize">
+                        <img src="{{ section.settings.feature_icon_2 | img_url: 'medium' }}?quality=100" alt="" class="img-fluid">
                     </div>
                 {% endif %}
                 <div class="col-10">
@@ -300,8 +312,8 @@
 
             <div class="vlt-1-main-content-wrapper row">
                 {% if section.settings.feature_icon_3 %}
-                    <div class="col-2 align-self-start">
-                        <img src="{{ section.settings.feature_icon_3 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    <div class="align-self-start col-2 d-flex justify-content-end icon-resize">
+                        <img src="{{ section.settings.feature_icon_3 | img_url: 'medium' }}?quality=100" alt="" class="img-fluid">
                     </div>
                 {% endif %}
                 <div class="col-10">
@@ -318,8 +330,8 @@
         <div class="col-12 col-md-6 p-0">
             <div class="vlt-1-main-content-wrapper row">
                 {% if section.settings.feature_icon_4 %}
-                    <div class="col-2 align-self-start">
-                        <img src="{{ section.settings.feature_icon_4 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    <div class="align-self-start col-2 d-flex justify-content-end icon-resize">
+                        <img src="{{ section.settings.feature_icon_4 | img_url: 'medium' }}?quality=100" alt="" class="img-fluid">
                     </div>
                 {% endif %}
                 <div class="col-10">
@@ -333,8 +345,8 @@
             </div>
             <div class="vlt-1-main-content-wrapper row">
                 {% if section.settings.feature_icon_5 %}
-                    <div class="col-2 align-self-start">
-                        <img src="{{ section.settings.feature_icon_5 | img_url: 'medium' }}" alt="" class="img-fluid">
+                    <div class="align-self-start col-2 d-flex justify-content-end icon-resize">
+                        <img src="{{ section.settings.feature_icon_5 | img_url: 'medium' }}?quality=100" alt="" class="img-fluid">
                     </div>
                 {% endif %}
                 <div class="col-10">
